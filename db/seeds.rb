@@ -10,7 +10,7 @@
 
 
 a = User.new({"email"=>"test1@test.com", "privilege"=>1})
-a.password = "test1"
+a.password = "test"
 a.save
 
 b = User.new({"email"=>"test2@test.com", "privilege"=>2})
