@@ -1,0 +1,74 @@
+<div class="newandupdate">
+    
+  <% if session["user_name"] == @new_item.user_name && session["privilege"] == 1 %>
+
+    <h1>Make changes to your account:</h1>
+    <%= form_for @user, method: :put, url: "/admin/users/#{@new_item.id}" do |f| %>
+      <strong><%= f.label :user_name, "Name:" %></strong><br><br>
+      <%= f.text_field :user_name, autofocus: true, style: "width:50%; min-width:50px", value: "#{@new_item.user_name}" %><br><br>
+      <strong><%= f.label :email, "Email:" %></strong><br><br>
+     <%= f.email_field :email, style: "width:50%; min-width:50px", value: "#{@new_item.email}" %><br><br>
+      <strong><%= f.label :password_hash, "Password:" %></strong><br><br>
+      (NOTE: If you don't want to change your password, leave this field blank.)<br><br>
+      <%= f.text_field :password_hash, style: "width:50%; min-width:50px" %><br><br>
+      <strong><%= f.label :status, "Status:" %></strong><br><br>
+      <%= f.text_field :status, style: "width:50%; min-width:50px", value: "#{@new_item.status}"%><br><br>
+     <strong><%= f.label :privilege, "Privilege:" %></strong><br><br>
+     <ul>
+       <li>1 - All-access</li>
+       <li>2 - Can add to or delete from library, but not create users</li>
+       <li>3 - Can add to library, but not create users or delete items</li>
+     </ul>
+     <%= f.number_field :privilege, in: 1.0..3.0, step: 1.0 %><br><br>            
+    <%= f.hidden_field :id, value: @new_item.id %>
+    <%= f.submit "UPDATE YOUR ACCOUNT", style: "width:185px", class: "navbutton" %>
+  <% end %>
+    
+  <% elsif session["user_name"] == @new_item.user_name %>
+ 
+    <h1>Make changes to your account:</h1>
+    <%= form_for @user, method: :put, url: "/admin/users/#{@new_item.id}" do |f| %>
+      <strong><%= f.label :user_name, "Name:" %></strong><br><br>
+      <%= f.text_field :user_name, autofocus: true, style: "width:50%; min-width:50px", value: "#{@new_item.user_name}" %><br><br>
+      <strong><%= f.label :email, "Email:" %></strong><br><br>
+     <%= f.email_field :email, style: "width:50%; min-width:50px", value: "#{@new_item.email}" %><br><br>
+      <strong><%= f.label :password_hash, "Password:" %></strong><br><br>
+      (NOTE: If you don't want to change your password, leave this field blank.)<br><br>
+      <%= f.text_field :password_hash, style: "width:50%; min-width:50px" %><br><br>
+      <%= f.hidden_field :id, value: @new_item.id %>
+      <%= f.submit "UPDATE YOUR ACCOUNT", style: "width:185px", class: "navbutton" %>
+    <% end %>
+    
+    
+  <% elsif session["privilege"] == 1 %>
+    <h1>Make changes to <%= @new_item.user_name %>'s account:</h1>
+    <%= form_for @user, method: :put, url: "/admin/users/#{@new_item.id}" do |f| %>
+      <strong><%= f.label :user_name, "Name:" %></strong><br><br>
+      <%= f.text_field :user_name, autofocus: true, style: "width:50%; min-width:50px", value: "#{@new_item.user_name}" %><br><br>
+      <strong><%= f.label :email, "Email:" %></strong><br><br>
+     <%= f.email_field :email, style: "width:50%; min-width:50px", value: "#{@new_item.email}" %><br><br>
+      <strong><%= f.label :password_hash, "Password:" %></strong><br><br>
+      (NOTE: If you don't want to change your password, leave this field blank.)<br><br>
+      <%= f.text_field :password_hash, style: "width:50%; min-width:50px" %><br><br>
+       <strong><%= f.label :privilege, "Privilege:" %></strong><br><br>
+       <ul>
+         <li>1 - All-access</li>
+         <li>2 - Can add to or delete from library, but not create users</li>
+         <li>3 - Can add to library, but not create users or delete items</li>
+       </ul>
+       <%= f.number_field :privilege, in: 1.0..3.0, step: 1.0 %><br><br>
+       <strong><%= f.label :status, "Status:" %></strong><br><br>
+       <%= f.text_field :status, style: "width:50%; min-width:50px", value: "#{@new_item.status}"%><br><br>  
+      <%= f.hidden_field :id, value: @new_item.id %>
+      <%= f.submit "UPDATE ADMINISTRATOR", style: "width:185px", class: "navbutton" %>
+    <% end %>
+  
+  
+  <% elsif session["user_name"] != @new_item.user_name && session["privilege"] != 1 %> 
+     <p class="error">Hmm, looks like you're ended up on someone else's account page. To update your own account, <a href="/admin/users/<%= session["user_id"] %>/update">go here.</a></p>
+     
+  <% end %>
+
+</div>
+
+

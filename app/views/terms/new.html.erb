@@ -1,0 +1,40 @@
+<div class="newandupdate"><h1>Add a new term</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p>1. Please double-check that the term you want to add isn't already in the collection:<br><br>
+  <form>
+    <label><strong>Terms:</strong></label>
+    <select>
+      <% @terms_array.each do |object| %>
+        <option><%= object.term %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+  </form>
+  
+  <hr></hr>
+  <p>2. If the term you want to add isn't included in the list above, then please fill out each field in the form below.</p>  
+  
+  <%= form_for @term do |f| %>
+   <strong><%= f.label :term, "Term:" %></strong><br><br>
+   <%= f.text_field :term, placeholder: "The word or phrase you're going to define", required: true, autofocus: true, style: "width:100%" %><br><br>
+   <strong><%= f.label :definition, "Definition:" %></strong><br><br>
+   <%= f.text_area :definition, placeholder: "(Maximum of 750 characters.)", required: true, maxlength: 750, style: "width:100%; height:175px" %><br><br>
+   <strong><%= f.label :phonetic, "Phonetic spelling:" %></strong><br><br>
+   Until I get the function built, go <a href="http://lingorado.com/ipa/">here</a> to grab the International Phonetic Alphabet transcription (American English).<br><br>
+   <%= f.text_field :phonetic, required: true, style: "width:100%" %><br><br>
+   <%= f.submit "ADD NEW TERM", style: "width:125px", class: "navbutton" %>
+  <% end %>
+  
+  
+  

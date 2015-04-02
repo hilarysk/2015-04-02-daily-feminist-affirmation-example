@@ -1,0 +1,46 @@
+<div class="newandupdate"><h1>Add a new administrator</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p>1. Please double-check that the administrator you want to add doesn't already have an account:<br><br>
+  <form>
+    <label><strong>Administrators:</strong></label>
+    <select>
+      <% @users_array.each do |object| %>
+        <option><%= object.email %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+  </form>
+  
+  <hr></hr>
+  <p>2. If the administrator doesn't have an account, please fill out each field in the form below.</p>  
+  
+  <%= form_for @user do |f| %>
+   <strong><%= f.label :user_name, "Full name:" %></strong><br><br>
+   <%= f.text_field :user_name, required: true, autofocus: true, style: "width:50%; min-width:50px" %><br><br>
+   <strong><%= f.label :email, "Email:" %></strong><br><br>
+   <%= f.email_field :email, required: true, style: "width:50%; min-width:50px" %><br><br>
+   <strong><%= f.label :password_hash, "Password:" %></strong><br><br>
+   <%= f.text_field :password_hash, required: true, style: "width:50%; min-width:50px" %><br><br> 
+   <strong><%= f.label :privilege, "Privilege:" %></strong><br><br>
+   <ul>
+     <li>1 - All-access</li>
+     <li>2 - Can add to or delete from library, but not create users</li>
+     <li>3 - Can add to library, but not create users or delete items</li>
+   </ul>
+   <%= f.number_field :privilege, in: 1.0..3.0, step: 1.0, required: true %><br><br>
+   <%= f.submit "ADD NEW ADMINISTRATOR", style: "width:190px", class: "navbutton" %>
+  <% end %>
+  
+  
+  

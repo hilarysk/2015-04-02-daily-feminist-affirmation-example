@@ -1,0 +1,15 @@
+<div class="newandupdate">
+
+  <h1>Delete confirmation:</h1>
+  <p>Please review the excerpt information below and confirm your intent to permanently delete it by clicking "delete excerpt".</p>
+  <%= form_for @excerpt, method: :delete, url: "/admin/excerpts/#{@new_ex.id}" do |f| %>
+    <strong>Excerpt text:</strong><br><br>
+    "<%= @new_ex.excerpt %>"<br><br>
+    <strong>Source:</strong><br><br>
+    <%= @new_ex.source %><br><br>
+    <strong>Excerpt author/writer:</strong><br><br>
+    <%= @new_ex.person.person %><br><br>
+    <%= f.hidden_field :id, value: @new_ex.id %>
+    <%= f.submit "DELETE EXCERPT", style: "width:135px", class: "navbutton" %><% end %><a href="/admin/update_database"><button class="navbutton" style="width: 145px; float: right; display: inline-block">DON'T DELETE</button></a>
+</div>
+

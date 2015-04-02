@@ -1,0 +1,27 @@
+<div class="newandupdate">
+
+  <h1>Delete confirmation:</h1>
+  <p>Please review the person information below and confirm your intent to permanently delete it by clicking "delete person".</p>
+  
+  <%= form_for @person, method: :delete, url: "/admin/people/#{@new_item.id}" do |f| %>
+    <strong>Person:</strong><br><br>
+    <%= @new_item.person %><br><br>
+    <strong>Bio:</strong><br><br>
+    <%= @new_item.bio %><br><br>
+    <% if @new_item.state != nil && @new_item.state != "" %>
+      <strong>State:</strong><br><br>
+      <%= @new_item.state %><br><br>
+    <% end %>
+    <strong>Country:</strong><br><br>
+    <%= @new_item.country %><br><br>
+    <strong>Image:</strong><br><br>
+    <%= @new_item.image %><br><br>
+    <strong>Caption:</strong><br><br>
+    <%= @new_item.caption %><br><br>
+    <strong>Source:</strong><br><br>
+    <%= @new_item.source %><br><br>
+    <%= f.hidden_field :id, value: @new_item.id %>
+    <%= f.submit "DELETE PERSON", style: "width:145px", class: "navbutton" %><% end %><a href="/admin/update_database"><button class="navbutton" style="width: 145px; float: right; display: inline-block">DON'T DELETE</button></a>
+</div>
+
+

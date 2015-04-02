@@ -1,0 +1,12 @@
+<div class="newandupdate">
+
+  <h1>Update the keyword:</h1>  
+  
+  <%= form_for @keyword, method: :put, url: "/admin/keywords/#{@new_item.id}" do |f| %>
+  
+  <strong><%= f.label :keyword, "Keyword:" %></strong><br><br>
+  <%= f.text_field :keyword, required: true, autofocus: true, style: "width:100%", value: "#{@new_item.keyword}" %><br><br>
+    <%= f.submit "UPDATE KEYWORD", style: "width:145px", class: "navbutton" %>
+<% end %>
+</div>
+

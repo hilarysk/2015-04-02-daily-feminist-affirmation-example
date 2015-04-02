@@ -1,0 +1,25 @@
+<div class="newandupdate"><h1>Update an existing excerpt</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+  <form action="<%= "#{@path}" %>">
+
+  <p>To find the excerpt you want to update, click the source first, then select the specific excerpt based on the first line:</p>
+  <form>
+  <label><strong>Sources:</strong></label>
+  <br><br>
+    <select name="source">
+      <p><% @excerpt_sources.each do |source| %>
+        <option value="<%= "#{source}" %>"><%= "#{source}" %></option>
+      <% end %></p>
+    </select>
+    <br><br>
+    <input type="submit" class="navbutton" style="width:135px" value="SEE EXCERPTS">
+    <br><br>
+  </form> 
+  <br>
+
+  <% if @excerpt_choice %> 
+    <%= render partial: "#{@excerpt_choice}" %>
+  <% end %>
+  
+</div>

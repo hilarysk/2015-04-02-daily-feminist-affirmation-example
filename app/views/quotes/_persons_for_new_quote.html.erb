@@ -1,0 +1,14 @@
+<% if @quote_array == [] %>
+  <p>There are no quotes from <%= @person %>.</p>
+<% else  %>
+  <form action="<%= "#{@path}" %>">
+    <p>Quotes from <em><%= @person %></em> (if it's a longer quote, you'll just see the first and last 50 characters):</p>
+    <select>
+    <% @quote_array.each do |object| %>
+      <option><%= "#{object.quote.byteslice(0...50)}" %> ... <%= "#{object.quote.byteslice(-50...-1)}" %>.
+      </option>
+    <% end %></p>
+    </select>
+    <br><br>
+  </form> 
+<% end %>

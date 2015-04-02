@@ -1,0 +1,18 @@
+<div class="formattingpartials">
+  <h1><%= raw @success_message %></h1>
+  <hr></hr>
+  <br>
+  <p align="center"><strong>PERSON</strong></p>
+  <p><strong><%= @object.person %></strong><br><br>
+    <a href="<%= @object.image %>"><img src="<%= @object.image %>" width="100px"></a><br><br>
+    <strong>Birthplace:</strong> <% if @state %>
+                                  <%= "#{@state} #{@object.country}" %>
+                                 <% else %>
+                                  <%= "#{@object.country}"%>
+                                 <% end %>
+    <br><br>
+    <%= raw "#{@object.bio}" %>
+  </p>
+  <p align="right">- <em><%= raw "#{@object.source}" %></em><br><br></p>
+  <p><%= raw @add_keywords %></p>
+</div>

@@ -1,0 +1,60 @@
+<br><br>
+<br><br>
+<hr></hr>
+<p><strong>2. Select the specific <%= "#{@item_class.downcase}" %>:</strong></p>
+<% if @item_class == "Quote" %>
+  <form action="<%= "#{@path}" %>">
+    <select name="item_id">
+      <% Quote.select("id, quote").each do |object| %>
+        <option value="<%= object.id %>">
+          <%= "#{object.quote.byteslice(0...50)}" %> ...     
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+    <input type="hidden" name="class" value="Quote">
+    <input type="submit" value="CHOOSE QUOTE" class="navbutton" style="width:115px">
+  </form> 
+
+<% elsif @item_class == "Person" %>
+  <form action="<%= "#{@path}" %>">
+    <select name="item_id">
+      <% Person.select("id, person").each do |object| %>
+        <option value="<%= object.id %>">
+          <%= object.person %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+    <input type="hidden" name="class" value="Person">
+    <input type="submit" value="CHOOSE PERSON" class="navbutton" style="width:135px">
+  </form> 
+
+<% elsif @item_class == "Term" %>
+  <form action="<%= "#{@path}" %>">
+    <select name="item_id">
+      <% Term.select("id, term").each do |object| %>
+        <option value="<%= object.id %>">
+          <%= object.term %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+    <input type="hidden" name="class" value="Term">
+    <input type="submit" value="CHOOSE TERM" class="navbutton" style="width:105px">
+  </form> 
+
+<% elsif @item_class == "Excerpt" %>
+  <form action="<%= "#{@path}" %>">
+    <select name="item_id">
+      <% Excerpt.select("id, excerpt").all.each do |object| %>
+        <option value="<%= object.id %>">
+          <%= "#{object.excerpt.byteslice(0...50)}" %> ...
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+    <input type="hidden" name="class" value="Excerpt">
+    <input type="submit" value="CHOOSE EXCERPT" class="navbutton" style="width:135px">
+  </form> 
+<% end %>

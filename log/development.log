@@ -1,0 +1,345 @@
+
+
+Started GET "/yay" for 127.0.0.1 at 2015-04-02 15:26:02 -0500
+Connecting to database specified by database.yml
+Processing by PublicController#yay as HTML
+  [1m[36m (30.8ms)[0m  [1mSELECT id FROM quotes[0m
+  [1m[35mQuote Load (16.4ms)[0m  SELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (18.1ms)[0m  [1mSELECT id FROM terms[0m
+  [1m[35mTerm Load (0.8ms)[0m  SELECT "terms".* FROM "terms" WHERE "terms"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (26.0ms)[0m  [1mSELECT id FROM excerpts[0m
+  [1m[35mExcerpt Load (6.3ms)[0m  SELECT "excerpts".* FROM "excerpts" WHERE "excerpts"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (14.1ms)[0m  [1mSELECT id FROM people[0m
+  [1m[35mPerson Load (0.7ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mKeywordItem Load (21.3ms)[0m  [1mSELECT "keyword_items".* FROM "keyword_items" WHERE "keyword_items"."item_id" = 5 AND "keyword_items"."item_type" = 'Term'[0m
+  [1m[35mKeyword Load (7.4ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 31 LIMIT 1
+  Rendered public/term.html.erb within layouts/public (2.1ms)
+Compiled admin.css  (0ms)  (pid 4006)
+Compiled public.css  (0ms)  (pid 4006)
+Compiled application.css  (15ms)  (pid 4006)
+Compiled jquery.js  (3ms)  (pid 4006)
+Compiled jquery_ujs.js  (0ms)  (pid 4006)
+Compiled admin.js  (0ms)  (pid 4006)
+Compiled public.js  (0ms)  (pid 4006)
+Compiled application.js  (23ms)  (pid 4006)
+Completed 200 OK in 474.0ms (Views: 70.9ms | ActiveRecord: 255.9ms)
+
+
+Started GET "/yay" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Processing by PublicController#yay as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT id FROM quotes[0m
+  [1m[35mQuote Load (0.4ms)[0m  SELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mSELECT id FROM terms[0m
+  [1m[35mTerm Load (0.4ms)[0m  SELECT "terms".* FROM "terms" WHERE "terms"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT id FROM excerpts[0m
+  [1m[35mExcerpt Load (0.6ms)[0m  SELECT "excerpts".* FROM "excerpts" WHERE "excerpts"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT id FROM people[0m
+  [1m[35mPerson Load (0.2ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mKeywordItem Load (0.2ms)[0m  [1mSELECT "keyword_items".* FROM "keyword_items" WHERE "keyword_items"."item_id" = 1 AND "keyword_items"."item_type" = 'Excerpt'[0m
+  [1m[35mKeyword Load (0.2ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 26 LIMIT 1
+  [1m[36mKeyword Load (0.2ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 40 LIMIT 1[0m
+  [1m[35mKeyword Load (0.2ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 29 LIMIT 1
+  [1m[36mKeyword Load (0.3ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 24 LIMIT 1[0m
+  [1m[35mKeyword Load (0.3ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 6 LIMIT 1
+  [1m[36mPerson Load (0.8ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 9 LIMIT 1[0m
+  Rendered public/excerpt.html.erb within layouts/excerpt (4.4ms)
+Completed 200 OK in 24.5ms (Views: 9.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /admin.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /public.css - 200 OK (1ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /public.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /admin.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/top.jpg" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /top.jpg - 304 Not Modified (6ms)
+
+
+Started GET "/assets/cctypewriter.jpg" for 127.0.0.1 at 2015-04-02 15:26:03 -0500
+Served asset /cctypewriter.jpg - 304 Not Modified (7ms)
+
+
+Started GET "/yay" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Processing by PublicController#yay as HTML
+  [1m[35m (0.2ms)[0m  SELECT id FROM quotes
+  [1m[36mQuote Load (0.2ms)[0m  [1mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT id FROM terms
+  [1m[36mTerm Load (0.2ms)[0m  [1mSELECT "terms".* FROM "terms" WHERE "terms"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SELECT id FROM excerpts
+  [1m[36mExcerpt Load (0.2ms)[0m  [1mSELECT "excerpts".* FROM "excerpts" WHERE "excerpts"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT id FROM people
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mKeywordItem Load (16.1ms)[0m  SELECT "keyword_items".* FROM "keyword_items" WHERE "keyword_items"."item_id" = 9 AND "keyword_items"."item_type" = 'Person'
+  [1m[36mKeyword Load (2.1ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 28 LIMIT 1[0m
+  [1m[35mKeyword Load (0.3ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 40 LIMIT 1
+  [1m[36mKeyword Load (0.3ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 41 LIMIT 1[0m
+  [1m[35mKeyword Load (0.3ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 35 LIMIT 1
+  [1m[36mKeyword Load (0.6ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 26 LIMIT 1[0m
+  [1m[35mKeyword Load (0.3ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 6 LIMIT 1
+  Rendered public/person.html.erb within layouts/public (0.9ms)
+Completed 200 OK in 52.2ms (Views: 5.7ms | ActiveRecord: 21.9ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:12 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Processing by PublicController#search as HTML
+  [1m[36mKeyword Load (0.2ms)[0m  [1mSELECT keyword FROM "keywords" [0m
+  Rendered public/search.html.erb within layouts/public (0.8ms)
+Completed 200 OK in 7.4ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:19 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/keyword?keyword=Ella+Baker" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Processing by PublicController#keyword as HTML
+  Parameters: {"keyword"=>"Ella Baker"}
+  [1m[35mKeyword Load (0.4ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."keyword" = 'Ella Baker' LIMIT 1
+  [1m[36mExcerpt Load (0.4ms)[0m  [1mSELECT "excerpts".* FROM "excerpts" INNER JOIN "keyword_items" ON "excerpts"."id" = "keyword_items"."item_id" WHERE "keyword_items"."keyword_id" = 1 AND "keyword_items"."item_type" = 'Excerpt'[0m
+  [1m[35mQuote Load (0.4ms)[0m  SELECT "quotes".* FROM "quotes" INNER JOIN "keyword_items" ON "quotes"."id" = "keyword_items"."item_id" WHERE "keyword_items"."keyword_id" = 1 AND "keyword_items"."item_type" = 'Quote'
+  [1m[36mTerm Load (0.3ms)[0m  [1mSELECT "terms".* FROM "terms" INNER JOIN "keyword_items" ON "terms"."id" = "keyword_items"."item_id" WHERE "keyword_items"."keyword_id" = 1 AND "keyword_items"."item_type" = 'Term'[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people" INNER JOIN "keyword_items" ON "people"."id" = "keyword_items"."item_id" WHERE "keyword_items"."keyword_id" = 1 AND "keyword_items"."item_type" = 'Person'
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = 1 LIMIT 1[0m
+  Rendered public/_quote_formatting.html.erb (2.6ms)
+  Rendered public/_person_formatting.html.erb (0.6ms)
+  Rendered public/keyword.html.erb within layouts/public (9.8ms)
+Completed 200 OK in 44.2ms (Views: 13.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:21 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/yay" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Processing by PublicController#yay as HTML
+  [1m[35m (0.2ms)[0m  SELECT id FROM quotes
+  [1m[36mQuote Load (0.4ms)[0m  [1mSELECT "quotes".* FROM "quotes" WHERE "quotes"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  SELECT id FROM terms
+  [1m[36mTerm Load (0.3ms)[0m  [1mSELECT "terms".* FROM "terms" WHERE "terms"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  SELECT id FROM excerpts
+  [1m[36mExcerpt Load (0.3ms)[0m  [1mSELECT "excerpts".* FROM "excerpts" WHERE "excerpts"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT id FROM people
+  [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people" WHERE "people"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mKeywordItem Load (0.2ms)[0m  SELECT "keyword_items".* FROM "keyword_items" WHERE "keyword_items"."item_id" = 3 AND "keyword_items"."item_type" = 'Person'
+  [1m[36mKeyword Load (0.2ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 37 LIMIT 1[0m
+  [1m[35mKeyword Load (0.2ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 40 LIMIT 1
+  [1m[36mKeyword Load (0.2ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 28 LIMIT 1[0m
+  [1m[35mKeyword Load (0.2ms)[0m  SELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 4 LIMIT 1
+  [1m[36mKeyword Load (0.2ms)[0m  [1mSELECT "keywords".* FROM "keywords" WHERE "keywords"."id" = 41 LIMIT 1[0m
+  Rendered public/person.html.erb within layouts/public (0.1ms)
+Completed 200 OK in 12.8ms (Views: 3.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Processing by AdminController#login as HTML
+Redirected to http://localhost:3000/admin/update_database
+Filter chain halted as :already_logged_in rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/update_database" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Processing by AdminController#update_database as HTML
+  Rendered admin/update_database.html.erb within layouts/admin (0.7ms)
+Completed 200 OK in 6.4ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/tags/change" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Processing by KeywordItemsController#choose as HTML
+  Rendered keyword_items/choose.html.erb within layouts/admin (0.8ms)
+Completed 200 OK in 12.1ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:37 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/tags/change?type=Excerpt" for 127.0.0.1 at 2015-04-02 15:26:38 -0500
+Processing by KeywordItemsController#choose as HTML
+  Parameters: {"type"=>"Excerpt"}
+  [1m[35mExcerpt Load (0.3ms)[0m  SELECT id, excerpt FROM "excerpts" 
+  Rendered keyword_items/_item.html.erb (1.9ms)
+  Rendered keyword_items/choose.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 8.1ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:38 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)

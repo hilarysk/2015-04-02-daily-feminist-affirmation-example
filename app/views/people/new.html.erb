@@ -1,0 +1,52 @@
+<div class="newandupdate"><h1>Add a new person</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p>1. Please double-check that the person you want to add isn't already in the collection:<br><br>
+  <form>
+    <label><strong>People:</strong></label>
+    <select>
+      <% @people_array.each do |object| %>
+        <option><%= object.person %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+  </form>
+  
+  <hr></hr>
+  <p>2. If the person you want to add isn't included in the list above, then please fill out each field in the form below.</p> 
+   
+  
+<%= form_for @person do |f| %>
+  <strong><%= f.label :person, "Person:" %></strong><br><br>
+  <%= f.text_field :person, placeholder: "The person's full name", required: true, autofocus: true, style: "width:100%" %><br><br>
+  <strong><%= f.label :bio, "Biography:" %></strong><br><br>
+  Whenever you want a paragraph break, enter <%= "<br><br>" %>
+  <%= f.text_area :bio, placeholder: "(Maximum of 1800 characters.)", required: true, maxlength: 1800, style: "width:100%; height:325px" %><br><br>
+  <strong><%= f.label :state, "State:" %></strong><br><br>
+  (If unknown, leave blank.)<br><br>
+  <%= f.text_field :state, placeholder: "State where the person is from", required: false, style: "width:100%" %><br><br>
+  <strong><%= f.label :country, "Country:" %></strong><br><br>
+  <%= f.text_field :country, placeholder: "Country where the person is from; required", required: true, style: "width:100%" %><br><br>
+  <strong><%= f.label :image, "Image URL (fair-use or public domain):" %></strong><br><br>
+  <%= f.text_field :image, placeholder: "Link to a fair-use or public domain image of the person", required: true, style: "width:100%" %><br><br>
+  <strong><%= f.label :caption, "Image credit, including link, when required:" %></strong><br><br>
+  If you're including a link, do so in the following manner:<br> <%= "<a href='LINK GOES HERE, INCLUDING HTTP://'>Credit goes here</a>" %>.<br><br>
+  <%= f.text_field :caption, required: true, style: "width:100%" %><br><br>
+  <strong><%= f.label :source, "Biography text source:" %></strong><br><br>
+  <%= f.text_field :source, required: true, style: "width:100%", value: "<a href='FULL LINK TO SOURCE GOES HERE, INCLUDING HTTP://'>Name of writer or organization goes here</a>" %><br><br>
+  
+  <%= f.submit "ADD NEW PERSON", style: "width:145px", class: "navbutton" %>
+<% end %>
+  
+  
+  

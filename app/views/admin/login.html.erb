@@ -1,0 +1,15 @@
+<div class="login"><h1> To add or update items, please login:</h1>
+  <p class="error"><%= @fail_message %><%= @logout_message %></p>
+  <br>
+
+  <form action="/login" method="post">
+    <label><strong>Email:</strong></label><br><br>
+    <input type="email" name="email" required autofocus><br><br>
+    <label><strong>Password:</strong></label><br><br>
+    <input type="password" name="password" required><br><br>
+    <input type="submit" class="navbutton" value="SUBMIT">
+  </form>
+
+  <br>
+  <br>
+</div>

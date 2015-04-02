@@ -1,0 +1,18 @@
+<div class="newandupdate">
+
+  <h1>Make changes to the term:</h1>  
+  
+  <%= form_for @term, method: :put, url: "/admin/terms/#{@new_item.id}" do |f| %>
+    <strong><%= f.label :term, "Term:" %></strong><br><br>
+    <%= f.text_field :term, required: true, autofocus: true, style: "width:100%", value: "#{@new_item.term}" %><br><br>
+   <strong><%= f.label :definition, "Definition:" %></strong><br><br>
+   (Maximum of 750 characters.)<br><br>
+       <%= f.text_area :definition, required: true, maxlength: 750, style: "width:100%; height:175px", value: "#{@new_item.definition}" %><br><br>
+    <strong><%= f.label :phonetic, "Phonetic spelling:" %></strong><br><br>
+    Until I get the function built, go <a href="http://lingorado.com/ipa/">here</a> to grab the International Phonetic Alphabet transcription (American English).<br><br>
+    <%= f.text_field :phonetic, required: true, style: "width:100%", value: "#{@new_item.phonetic}" %><br><br>
+     <%= f.hidden_field :id, value: @new_item.id %>
+     <%= f.submit "UPDATE EXCERPT", style: "width:135px", class: "navbutton" %>
+  <% end %>
+</div>
+

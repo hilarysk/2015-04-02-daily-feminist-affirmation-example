@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+  <html lang="en">
+  <head>
+    <title>Daily Feminist Affirmation</title>
+    <meta name="description" content="Everyone needs a little more feminism in their lives. "/>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <div id="wrapper">
+    <div id="header" link="#000000" vlink="#000000" alink="#000000">
+      <h4 class="headerheading"><a href="/yay" id="excerptLayoutLink">DAILY FEMINIST AFFIRMATION</a></h4>
+      <div id="jsReaffirm" class="reaffirm">
+        <a id="publicMenuAnchor" href="#">MENU</a>
+        <div id="publicMenu" style="display:none">
+            <a href="/yay" class="adminbutton">REAFFIRM</a>
+            <a href="/about" class="adminbutton">ABOUT</a>      
+            <a href="/search" class="adminbutton">SEARCH</a>
+          </div>
+      </div>
+
+    <hr></hr>
+    </div>
+
+    <div main>
+      <body link="#000000" vlink="#000000" alink="#000000">
+        <div id="yieldExcerpt">
+          <%= yield %>
+        </div>
+      </body>
+    </div>
+  </div>
+  
+  <div id="footer"> <hr>
+    <h4 class="footerfooting"><a href="/login">LOGIN</a></h4>
+  </div>
+</html>

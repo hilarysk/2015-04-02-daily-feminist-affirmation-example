@@ -1,0 +1,36 @@
+<div class="newandupdate"><h1>Add a new person</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p>1. Please double-check that the keyword you want to add isn't already in the collection:<br><br>
+  <form>
+    <label><strong>Keywords:</strong></label>
+    <select>
+      <% @keywords_array.each do |object| %>
+        <option><%= object.keyword %>
+        </option>
+      <% end %>
+    </select>
+    <br><br>
+  </form>
+  
+  <hr></hr>
+  <p>2. If the keyword you want to add isn't included in the list above, then please fill out the form below.</p> 
+   
+  
+<%= form_for @keyword do |f| %>
+  <strong><%= f.label :keyword, "Keyword:" %></strong><br><br>
+  <%= f.text_field :keyword, required: true, autofocus: true, style: "width:100%" %><br><br>  
+  <%= f.submit "ADD NEW KEYWORD", style: "width:145px", class: "navbutton" %>
+<% end %>
+  
+  
+  

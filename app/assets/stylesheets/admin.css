@@ -1,0 +1,306 @@
+/*Place all the styles related to the admin controller here.
+They will automatically be included in application.css.*/
+
+
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height:100%;
+}
+
+#main {
+  overflow: auto; padding-bottom:12.5%;
+}
+
+.error {
+  color: #DC143C;
+}
+
+body.standard  {
+  font-family: Georgia;
+  font-size: medium;
+  color: #000000;
+  text-decoration: none;
+  line-height: normal;
+  border: 0px;
+  background: #FFFFFF;
+}
+
+.personimagecaption {
+  font-style: italic;
+}
+
+.databaseContainer {
+  width: 100%;
+  color: #404040;
+  margin: 0 auto;
+  padding:2px 0px 2px 20px;
+  background-color: #dfdfdf;
+}
+
+.databaseContainerWhite {
+  width: 100%;
+  margin: 0 auto;
+  padding:2px 0px 2px 20px;
+  background-color: #ffffff;
+}
+
+
+div.reaffirm {
+  display: inline-block;
+  position: absolute;
+  width: 75px;
+  right: 8px;
+  font-family: Impact, Charcoal, sans-serif;
+  padding-top: 18px;
+  border-left: 10px solid #FFFFFF;
+}
+
+.headerheading {
+  display: inline-block;
+  margin-left: 1%; 
+  font-family: Impact, Charcoal, sans-serif;
+  
+}
+
+.footerfooting {
+  float: right;
+  padding-right: 0.75%; /* was 10 px */
+  font-family: Impact, Charcoal, sans-serif;
+  margin-right: 1.25%; 
+  position: relative; 
+  clear: both; 
+  margin-bottom: 2.5%;
+  
+}
+
+.floatright {
+  float: right;
+  padding-bottom: 1%; /* was 5px */
+  padding-left: 1%; /* was 3px */
+  padding-right: 1%;
+  width: 40%;
+}
+
+.floatleft {
+  float: left;
+  padding-bottom: 1%; /* was 5px */
+  padding-left: 1%;   /* was 3px */
+  padding-right: 1.25%;
+  width: 24%;
+}
+
+.bottomspacer {
+  height: 6.25%;
+}
+
+/* FORMATS PAGE TO ADD OR UPDATE ITEM */
+
+.newandupdate {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+/* NAV BUTTONS */
+
+.searchnavbuttonlogin {
+  margin-top: 2px;
+}
+
+.navbutton {
+	box-shadow:inset 0px 1px 0px 0px #bfbfbf;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #404040), color-stop(1, #000000) );
+	background-color:#404040;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Impact;
+	font-size:15px;
+  letter-spacing: 1px;
+	font-weight:normal;
+	font-style:normal;
+	height:34px;
+	line-height:14px;
+	width:71px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:3px -3px 0px #000000;
+  float: left;
+}
+.navbutton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #000000), color-stop(1, #404040) );
+	background:-moz-linear-gradient( center top, #000000 5%, #404040 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#404040');
+	background-color:#000000;
+}.navbutton:active {
+	position:relative;
+	top:1px;
+}
+
+.adminbuttonbig {
+  background-color: #dfdfdf;
+  text-indent:0;
+	border: 0px solid #000000;
+	display:inline-block;
+	color:#000000;
+	font-family:Impact;
+	font-size:15px;
+	font-weight:normal;
+	font-style:normal;
+  height: 52px;
+  line-height: 24px;
+  width: 75px;
+  padding-top: 4px;
+  text-decoration:none;
+	text-align:center;
+}
+
+.adminbuttonbig:hover {
+	background-color: #8A8A8A;
+}
+
+.adminbuttonbig:active {
+	position:relative;
+	top:1px;
+}
+
+.adminbutton {
+  background-color: #dfdfdf;
+	text-indent:0;
+	border: 0px;
+	display:inline-block;
+	color:#000000;
+	font-family:Impact;
+	font-size:15px;
+	font-weight:normal;
+	font-style:normal;
+	height:34px;
+	line-height:34px;
+	width:75px;
+	text-decoration:none;
+	text-align:center;
+}
+.adminbutton:hover {
+	background-color: #8A8A8A;
+}
+.adminbutton:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+
+
+.boldbutton {
+  font-weight: bold;
+  border-color: #dfdfdf;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+
+}
+
+.italicsbutton {
+  font-weight: normal;
+  border-color: #dfdfdf;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  font-style: italic;
+
+}
+
+.paragraphbutton {
+  font-weight: normal;
+  border-color: #dfdfdf;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+
+}
+
+/* ASSIGN KEYWORDS PAGE */
+
+fieldset.taglist  { 
+  margin: 0; 
+  padding: 0; 
+  margin-bottom: 20px; 
+  padding: 0px;
+  border: 0px;
+  width: 100%; 
+} 
+
+.checkbox {
+  float: left;
+  width: 49%;
+  margin-left: -40px;
+  margin-right: 40px;
+}
+
+.checkbox label {
+  display: block;
+  width: 75%;
+  float: left; 
+  padding-left: 10px;
+}
+
+.checkbox input {
+  float: left;
+}
+
+/* minimum size for iphone6 display*/
+
+@media screen and (max-width: 667px) {
+.checkbox {
+  float: left;
+  width: 95%;
+  margin-left: -40px;
+  margin-right: 40px;
+}
+}
+
+/* minimum size for superhuge monitor*/
+
+@media screen and (min-width: 1400px) {
+.checkbox {
+  float: left;
+  width: 30%;
+  margin-left: -40px;
+  margin-right: 40px;
+}
+}
+
+/* minimum size for iphone5 display*/
+/*@media screen and (max-width: 568px) {
+
+}
+*/
+
+.checkbox label:hover, 
+.checkbox label:focus  { 
+  background-color: #dfdfdf; 
+  border: 0px; 
+/*  width: 100%;*/
+} 
+
+.keywordItemContainer {
+  width: 100%;
+  color: #404040;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: italic;
+  background-color: #dfdfdf;
+}
+
+.keywordItem {
+  width: 60%;
+  margin: 0 auto;
+}

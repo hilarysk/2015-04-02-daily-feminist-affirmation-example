@@ -1,0 +1,27 @@
+<p>
+  <strong>Items added by:</strong> <%= "#{@user.user_name}" %><br>
+  <strong>Administrator since</strong>: <%= @user.created_at %>
+</p>
+
+<%  @items.each do |object| %>
+ <% @object = object %>
+ <% @success_message = "" %>
+ <% if @object.class == Quote %>
+   <%= render :partial => "public/quote_formatting" %>
+ 
+ <% elsif @object.class == Term%>
+   <%= render :partial => "public/term_formatting" %>
+   
+<% elsif @object.class == Excerpt%>
+  <%= render :partial => "public/excerpt_formatting" %>
+   
+ <% elsif @object.class == Person%>
+   <% if @object.state != ""%>
+      <% @state = "#{@object.state}, " %>
+   <% end  %>
+   <%= render :partial => "public/person_formatting" %>
+
+   
+   
+ <% end %>
+<% end %>

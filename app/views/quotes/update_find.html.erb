@@ -1,0 +1,25 @@
+<div class="newandupdate"><h1>Update an existing quote</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+  <form action="<%= "#{@path}" %>">
+
+  <p>To find the quote you want to update, click the speaker's name first, then select the specific quote based on the first line:</p>
+  <form>
+  <label><strong>Speakers:</strong></label>
+  <br><br>
+    <select name="person_id">
+      <p><% @person_names_ids.each do |object| %>
+        <option value="<%= object.id %>"><%= object.person %></option>
+      <% end %></p>
+    </select>
+    <br><br>
+    <input type="submit" class="navbutton" style="width:135px" value="SEE QUOTES">
+    <br><br>
+  </form> 
+  <br>
+
+  <% if @quote_choice %> 
+    <%= render partial: "#{@quote_choice}" %>
+  <% end %>
+  
+</div>

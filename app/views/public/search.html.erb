@@ -1,0 +1,21 @@
+<div class="search"><h1>Search by keyword</h1><br>
+  
+
+
+<form action="/keyword">
+<br><select name="keyword">
+<% @keywords.each do |object| %>
+  <% if object.keyword.length > 40 %>
+    <option value="<%= object.keyword %>"><%= object.keyword.byteslice(0...40) %> ...</option>
+  <% else %>
+    <option value="<%= object.keyword %>"><%= object.keyword %></option>
+  <% end %>
+<% end %>
+</select>
+<br><br>
+
+<input type="submit" class="navbutton" value="VIEW">
+<br><br>
+</form> 
+<br><br></div>
+  

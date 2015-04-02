@@ -1,0 +1,15 @@
+<div class="newandupdate"><h1>Delete an existing term</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+  <form action="/admin/terms/delete_choice" method="post">
+    <label><strong>Term:</strong></label><br><br>  
+    <select name="id">
+      <% @terms_array.each do |object| %>
+        <option value="<%= object.id %>"><%= object.term %></option>
+        <% end %>
+    </select>
+    <br><br>
+    <input name="authenticity_token" type="hidden" value="<%= session["_csrf_token"] %>" />  
+    <input type="submit" class="navbutton" style="width:125px" value="CHOOSE TERM">
+  </form>    
+</div>

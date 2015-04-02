@@ -1,0 +1,260 @@
+/*Place all the styles related to the public controller here.
+They will automatically be included in application.css.*/
+
+
+
+                                                            /* TERM MAIN PAGE */
+
+.termpage {
+  margin: auto;
+  width: 80%;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* Sizes the table containing the arrow and definition */
+
+.termtable {
+    width: 100%;
+}
+
+/* Actually controls the term itself */
+
+.termphonetic {
+  font-size: 50px;
+  font-family: Tahoma, Verdana, sans-serif; 
+  margin-left: 45px;
+}
+
+.termdefinition {
+  width: 100%;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  min-width: 125px;
+}
+
+/* The arrow image on the term page */
+
+.termimagesize {
+  min-width: 75px;
+  width: 100%;
+  margin-top: -10px;
+}
+
+/* Positions the arrow image within the table column */
+
+td.termimage {
+  padding-right: 20px;
+  width: 11.7%;
+  vertical-align: top;
+}
+
+/* Actually controls the phonetic spelling */
+
+.termterm {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-style: italic; 
+  font-size: 35px;
+  margin-left: -20px;
+  position: relative;
+  margin-top: -30px; 
+}
+
+                                                            /* JAVASCRIPT MENU */
+
+#publicMenuAnchor {
+  position: relative;
+  margin-left: 30px;
+  margin-right: 0px;
+}
+
+#publicMenu {
+  position: relative;
+  margin-top: 15px;
+}
+
+                                                          /* EXCERPT MAIN PAGE */
+
+.bottomspacer_excerpt {
+  height: 58.25%;
+}
+
+/* Typewriter image credit */
+
+.excerptcredit {
+  font-size:10px;
+  font-style: italic;  
+}
+
+/* Top part of typewriter image */
+
+.paperimage {
+  min-width: 375px;
+  min-height: 350px;
+  position: static;
+  width: 79.5%;
+  margin-bottom: -2%;
+  margin-left: 12.1%; 
+}
+
+/* Bottom part of typewriter image */
+
+.machineimage {
+  min-width: 412px;
+  position: static;
+  width: 90%;
+  margin-left: 0px;
+}
+
+.excerpttext2 { 
+  font-family: Courier;
+  position: absolute;
+  margin-top: 5%;
+  font-size: 100%;
+  margin-left: 28%;  
+  width: 45%;
+  min-width: 240px;
+  height: 100%;
+  max-height: 350px;
+  margin-bottom: 2.5%;
+  overflow: scroll;
+}
+
+                                                              /* PERSON MAIN PAGE */
+
+.persontextwrap {
+  float: right;
+  margin-left: 2.3%;
+  width: 40%;
+}
+
+.personname {
+  font-size: 30px;
+}
+
+.persontext {
+  width: 27%;
+}
+
+.personpage {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+                                                              /* KEYWORD PAGE */
+
+.keywordtext {
+  font-family: Impact, Charcoal, sans-serif;
+  align: center;
+  width: 100%;
+}
+
+.keywordtextexcerpt {
+  font-family: Impact, Charcoal, sans-serif;
+  align: center;
+  width: 200px;
+}
+
+                                                              /* QUOTE MAIN PAGE */
+
+.quotepage {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  font-family: Georgia;
+}
+
+.quotemarkleft {
+  width: 30px;
+  position: relative;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  margin-top: -5px;
+}
+
+.quotetext {
+  font-size: 25px;
+}
+
+.quoteperson {
+  font-family: Helvetica;
+  font-size: 20px;  
+  font-style: italic;
+  text-align: right;
+}
+
+                                                            /* KEYWORD LIST */
+
+.keywordlist {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  padding-bottom: 2.5%;
+}
+
+                                                              /* PARTIALS */
+
+.formattingpartials {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding-bottom: 2.5%;
+}
+
+                                                            /* SEARCH PAGE */
+
+.search {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  padding-bottom: 2.5%;
+}
+
+                                                            /* ABOUT PAGE */
+
+.about {
+  font-family: Georgia;
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 600px;
+  padding-bottom: 5%;
+}
+
+.aboutContainer {
+  width: 100%;
+  color: #404040;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #dfdfdf;
+}
+
+                                                            /* LOGIN PAGE */
+
+.login {
+  width: 80%;
+  margin: auto;
+  min-width: 300px;
+  max-width: 650px;
+  padding-bottom: 2.5%;
+}
+
+                                                            /* HOME PAGE */
+
+.home {
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 200%;  /* ?? */
+  margin-right: auto;
+  margin-left: auto;
+  width: 15.6%;
+  margin-top: 20%;
+  height: 15.6%;
+  
+}
+

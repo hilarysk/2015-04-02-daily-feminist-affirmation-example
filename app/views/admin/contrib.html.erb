@@ -1,0 +1,25 @@
+<div class="search"><h1>Peruse an administrator's contributions:</h1>
+
+  <form action="<%= "#{@path}" %>">
+    <strong>Choose an administrator:</strong><br><br>
+    <select name="id">  
+      <br><br>
+      <% @all_admins.each do |object| %>
+      <option value="<%= object.id %>"><%= object.user_name %></option>
+      <% end %>
+    </select><br><br>
+    <input class="navbutton" type="submit" value="SUBMIT">
+    <br><br>
+  </form>
+  
+<% if @specific_contrib %> 
+  <%= render "#{@specific_contrib}" %>
+<% end %>
+  
+  
+  
+</div>
+
+<!--javascript onclickEvent - ignore default action
+for id, partial becomes unhidden? do in future. -->
+  

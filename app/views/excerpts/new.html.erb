@@ -1,0 +1,56 @@
+<div class="newandupdate"><h1>Add a new excerpt</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p><strong>1. Please double-check that the excerpt you want to add isn't already in the collection:</strong><br><br>
+    First, see if the excerpt's source is in the library; if so, select that source, and hit the button to see existing excerpts.</p>
+  <p><form action="<%= "#{@path}" %>">
+     <select name="source">
+       <% @excerpt_sources.each do |source| %>    
+         <option value="<%= "#{source}" %>"><%= "#{source}" %></option>
+      <% end  %>
+    </select><br><br>  
+  <input type="submit" value="SEE EXCERPTS" class="navbutton" style="width:105px">
+
+  
+    <br><br>
+  </form></p>
+
+  <% if @excerpt_choice %> 
+    <%= render partial: "#{@excerpt_choice}" %>
+  <% end %>
+  <br><br>
+  <hr></hr>
+  <p><strong>2. If the excerpt you want to add isn't included in the list above, then please fill out each field in the form below.</strong></p>  
+  
+  
+  
+  
+  <%= form_for @excerpt do |f| %>
+   <strong><%= f.label :excerpt, "Excerpt text:" %></strong><br><br>
+   <%= f.text_area :excerpt, placeholder: "(Maximum of 825 characters.)", required: true, autofocus: true, maxlength: 825, style: "width:100%; height:175px" %><br><br>
+   <strong><label>Excerpt source:</label></strong><br>
+     Choose an existing source:<br><br>
+      <select name="source1" style="width:100%">
+        <% @excerpt_sources.each do |source| %>
+          <option value="<%= "#{source}" %>"><%= "#{source}" %></option>
+       <% end  %>
+      </select><br><br>
+     Or enter a new source:<br><br>
+     <%= f.text_field :source, placeholder: "Name of book or magazine", style: "width:100%" %><br><br>
+   <strong><%= f.label :person_id, "Author/writer:" %></strong><br>
+   (Note: If author or writer is not listed below, you need to <a href="/admin/people/new">create a person entry</a> for the author, first.)<br><br>
+     <%= f.select :person_id, options_for_select(@person_names_ids.collect {|object| [(object.person), (object.id)] }) %><br><br>
+     <%= f.submit "ADD NEW EXCERPT", style: "width:150px", class: "navbutton" %>
+  <% end %>
+  
+  
+  

@@ -1,0 +1,10 @@
+<div class="search">
+  <h1><%= session["user_name"].capitalize %>, your account appears to be inactive.</h1>
+  <p>This can happen for a number of reasons. For more information, or to inquire about having your account changed back to <em>active</em>, please contact a Privilege 1 administrator:</p>
+  <ul>
+    <% User.where("privilege = 1").each do |object| %>
+      <li><strong><%= object.user_name %></strong>: <a href="mailto:<%= object.email  %>"><%= object.email %></a></li>
+    <% end  %>    
+  </ul>
+</div>
+    

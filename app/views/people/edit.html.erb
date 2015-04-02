@@ -1,0 +1,37 @@
+<div class="newandupdate">
+
+  <h1>Make changes to the person:</h1>  
+
+  
+  <%= form_for @person, method: :put, url: "/admin/people/#{@new_item.id}" do |f| %>
+  
+  <strong><%= f.label :person, "Person:" %></strong><br><br>
+  <%= f.text_field :person, placeholder: "The person's full name", required: true, autofocus: true, style: "width:100%", value: "#{@new_item.person}" %><br><br>
+  <strong><%= f.label :bio, "Biography:" %></strong><br><br>
+  <input type="button" class="boldbutton" onmousedown="formatSelectedText('strong'); return false" value="Bold">
+  <input type="button" class="italicsbutton" value="Italics" onmousedown="formatSelectedText('em'); return false">
+  <input type="button" class="paragraphbutton" value="Paragraph Break" onmousedown="insertParagraphBreak(); return false">
+  <br><br>
+  <!-- <div contentEditable="true" id="bioEdit">
+    <%= raw @new_item.bio %>
+  </div> -->
+  <%= f.text_area :bio, placeholder: "(Maximum of 1800 characters.)", required: true, maxlength: 1800, style: "width:100%; height:175px", value: "#{@new_item.bio}" %><br><br>
+  <strong><%= f.label :state, "State:" %></strong><br><br>
+  (If unknown, leave blank.)<br><br>
+  <%= f.text_field :state, placeholder: "State where the person is from", required: false, style: "width:100%", value: "#{@new_item.state}" %><br><br>
+  <strong><%= f.label :country, "Country:" %></strong><br><br>
+  <%= f.text_field :country, placeholder: "Country where the person is from; required", required: true, style: "width:100%", value: "#{@new_item.country}" %><br><br>
+  <strong><%= f.label :image, "Image URL (fair-use or public domain):" %></strong><br><br>
+  <%= f.text_field :image, placeholder: "Link to a fair-use or public domain image of the person", required: true, style: "width:100%", value: "#{@new_item.image}" %><br><br>
+  <strong><%= f.label :caption, "Image credit (including link, when required):" %></strong><br><br>
+  If you're including a link, do so in the following manner:<br> <%= "<a href='LINK GOES HERE, INCLUDING HTTP://'>Credit goes here</a>" %>.<br><br>
+  <%= f.text_field :caption, required: true, style: "width:100%", value: "#{@new_item.caption}" %><br><br>
+  <strong><%= f.label :source, "Biography text source:" %></strong><br><br>
+  <%= f.text_field :source, required: true, style: "width:100%", value: "#{@new_item.source}" %><br><br>
+  
+  <%= f.submit "UPDATE PERSON", style: "width:145px", class: "navbutton" %>
+<% end %>
+</div>
+</div>
+
+

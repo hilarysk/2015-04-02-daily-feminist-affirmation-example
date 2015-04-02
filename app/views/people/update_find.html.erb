@@ -1,0 +1,15 @@
+<div class="newandupdate"><h1>Update an existing person</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+<form action="/admin/people/update_choice" method="post">
+  <label><strong>Person:</strong></label><br><br>  
+  <select name="id">
+    <% @people_array.each do |object| %>
+      <option value="<%= object.id %>"><%= object.person %></option>
+      <% end %>
+  </select>
+  <br><br>
+  <input name="authenticity_token" type="hidden" value="<%= session["_csrf_token"] %>" />  
+  <input type="submit" class="navbutton" style="width:125px" value="CHOOSE PERSON">
+</form>  
+</div>

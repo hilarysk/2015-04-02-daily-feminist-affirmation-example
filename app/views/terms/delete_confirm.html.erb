@@ -1,0 +1,14 @@
+<div class="newandupdate">
+
+  <h1>Delete confirmation:</h1>
+  <p>Please review the term information below and confirm your intent to permanently delete it by clicking "delete term".</p>
+  <%= form_for @term, method: :delete, url: "/admin/terms/#{@new_item.id}" do |f| %>
+    <strong>Term:</strong><br><br>
+    "<%= @new_item.term %>"<br><br>
+    <strong>Definition:</strong><br><br>
+    <%= @new_item.definition %><br><br>
+    <strong>Phonetic spelling:</strong><br><br>
+    <%= @new_item.phonetic %><br><br>
+    <%= f.hidden_field :id, value: @new_item.id %>
+    <%= f.submit "DELETE TERM", style: "width:125px", class: "navbutton" %><% end %><a href="/admin/update_database"><button class="navbutton" style="width: 145px; float: right; display: inline-block">DON'T DELETE</button></a>
+</div>

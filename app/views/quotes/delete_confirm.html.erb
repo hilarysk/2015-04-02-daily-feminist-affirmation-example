@@ -1,0 +1,12 @@
+<div class="newandupdate">
+
+  <h1>Delete confirmation:</h1>
+  <p>Please review the quote information below and confirm your intent to permanently delete it by clicking "delete quote".</p>
+  <%= form_for @quote, method: :delete, url: "/admin/quotes/#{@new_item.id}" do |f| %>
+    <strong>Quote:</strong><br><br>
+    "<%= @new_item.quote %>"<br><br>
+    <strong>Speaker:</strong><br><br>
+    <%= @new_item.person.person %><br><br>
+    <%= f.hidden_field :id, value: @new_item.id %>
+    <%= f.submit "DELETE QUOTE", style: "width:135px", class: "navbutton" %><% end %><a href="/admin/update_database"><button class="navbutton" style="width: 145px; float: right; display: inline-block">DON'T DELETE</button></a>
+</div>

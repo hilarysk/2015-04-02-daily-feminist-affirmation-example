@@ -1,0 +1,76 @@
+<div class="search">
+  <h1>Welcome, <%= session["user_name"] %>!</h1>
+  <p><% if flash[:message] %>
+      <%= raw flash[:message] %>
+     <% end  %>
+    <%= raw @message %>
+    <div class="error"><%= raw @error %></div></p>
+
+  <% if session["privilege"] == 1 %>
+  <div class="databaseContainer">
+    <p><strong>Administrator options</strong></p>
+    <ul>
+      <li><a href='/admin/users/new'>Add new administrator</a></li>
+      <li><a href="/admin/users/update">Update an administrator's account</a></li>
+      <li><a href="/admin/users/delete">Delete an administrator</a></li>
+      <li><a href='/admin/contrib'>See administrator's contributions</a></li>
+    </ul>
+  </div>
+  <% end  %>
+  
+  <div class="databaseContainerWhite">  
+  <p><strong>Add a new item</strong></p>
+  <ul>
+    <li><a href="/admin/excerpts/new">Excerpt</a></li>
+    <li><a href="/admin/terms/new">Term</a></li> <!-- might need to delete so just /admin/term -->
+    <li><a href="/admin/quotes/new">Quote</a></li>
+    <li><a href="/admin/people/new">Person</a></li>
+    <li><a href="/admin/keywords/new">Keyword</a></li>
+  </ul>
+  </div>
+
+  <div class="databaseContainer">
+    <p><strong>Update an existing item</strong></p>
+    <ul>
+      <li><a href="/admin/excerpts/update">Excerpt</a></li>
+      <li><a href="/admin/terms/update">Term</a></li>
+      <li><a href="/admin/quotes/update">Quote</a></li>
+      <li><a href="/admin/people/update">Person</a></li>
+      <li><a href="/admin/keywords/update">Keyword</a></li>
+      <li><a href="/admin/users/<%= session["user_id"] %>/edit">Your account</a></li>    
+    </ul>
+  </div>
+
+  <% if session["privilege"] < 3 %>
+    <div class="databaseContainerWhite">
+      <p><strong>Delete an existing item</strong></p>
+      <ul>
+        <li><a href="/admin/excerpts/delete">Excerpt</a></li>
+        <li><a href="/admin/terms/delete">Term</a></li>
+        <li><a href="/admin/quotes/delete">Quote</a></li>
+        <li><a href="/admin/people/delete">Person</a></li>
+        <li><a href="/admin/keywords/delete">Keyword</a></li> 
+      </ul>
+    </div>
+  
+    <div class="databaseContainer">
+      <p><strong>Change tags</strong></p>
+      <ul>
+        <li><a href="/admin/tags/change">Assign keywords to a term, excerpt, quote or person</a></li>
+      </ul>
+    </div>
+
+  <% elsif session["privilege"] == 3 %>
+    <div class="databaseContainerWhite">
+      <p><strong>Change tags</strong></p>
+      <ul>
+        <li><a href="/admin/tags/change">Assign keywords to a term, excerpt, quote or person</a></li>
+      </ul>
+    </div>
+  
+  <% end  %>
+
+  <div class="bottomspacer"></div>
+</div>
+
+

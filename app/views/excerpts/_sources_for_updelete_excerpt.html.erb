@@ -1,0 +1,14 @@
+
+<form action="<%= @form_action %>" method="post">
+  <label><strong>Excerpt:</strong></label><br><br>
+  Click the text that matches the beginning of the excerpt from <em><%= @excerpt %></em> that you want to <%= @action %>.<br><br>
+  
+  <select name="id">
+    <% @text_array.each do |object| %>
+      <option value="<%= "#{object.id}" %>"><%= "#{object.excerpt.byteslice(0...30)}" %></option>
+      <% end %>
+  </select>
+  <br><br>
+  <input name="authenticity_token" type="hidden" value="<%= session["_csrf_token"] %>" />  
+  <input type="submit" class="navbutton" style="width:135px" value="CHOOSE EXCERPT">
+</form>

@@ -1,0 +1,29 @@
+<div class="formattingpartials">
+  
+  <% if session["user_name"] == @prev_user_info.user_name %>
+    <h1>
+      Your account was successfully updated:
+    </h1>
+    <hr></hr>
+    <br>
+    <ul>
+      <li><strong>New name:</strong> <%= @object.user_name %></li>
+      <li><strong>New email:</strong> <%= @object.email %></li>
+    </ul>
+    <p><em>If you updated your password, don't fret; we're just not showing it here for security purposes. Any changes you made went through.</em></p>
+    
+  <% elsif session["privilege"] == 1 %>
+    <h1>
+      <%= @prev_user_info.user_name %>'s account was successfully updated:
+    </h1>
+    <hr></hr>
+    <br>
+    <ul>
+      <li><strong>New name:</strong> <%= @object.user_name %></li>
+      <li><strong>New email:</strong> <%= @object.email %></li>
+      <li><strong>New privilege level:</strong> <%= @object.privilege %></li>
+      <li><strong>New status:</strong> <%= @object.status %></li>
+    </ul>
+
+  <% end %>
+</div>

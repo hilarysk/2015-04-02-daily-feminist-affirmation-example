@@ -1,0 +1,23 @@
+<!-- When all done, try to make text wrap around one-column TABLE containing image, caption -->
+
+<p><div class="personpage"><img class="persontextwrap" src="<%= "#{@item.image}" %>">
+  <strong class="personname"><%= "#{@item.person.upcase}" %></strong><br><br>
+  <strong>Birthplace:</strong> <%= "#{@item.state}#{@item.country}" %><br><br>
+  <%= raw "#{@item.bio}" %><br><br>
+  <em><%= raw "#{@item.source}" %></em>
+</p>
+  
+<p class="personimagecaption">Photo: <%= raw "#{@item.caption}" %></p>
+<hr></hr><br>
+<p class="keywordtext">TAGS: <% @keywords.each do |keyword1| %>
+  <a href="/keyword?keyword=<%= "#{keyword1}" %>"><%= "#{keyword1}" %></a><%= " | " %>  
+<% end %>
+</p> <p><iframe width="200px" src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdailyfemaff.herokuapp.com%2Fitem%3Ftable%3Dpeople%26id%3D<%= "#{@item.id.to_s}" %>&amp;width&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=30&amp;appId=275052925858908" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:30px;" allowTransparency="true"></iframe></p>
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://dailyfemaff.herokuapp.com/item?table=people&id=<%= "#{@item.id.to_s}" %>" data-hashtags="DailyFemAff">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+</div>
+  
+
+<!--<div class="bottomspacer"></div>
+<div class="bottomspacer"></div>
+<div class="bottomspacer"></div> -->

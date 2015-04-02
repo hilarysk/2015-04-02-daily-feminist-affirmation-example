@@ -1,0 +1,24 @@
+<div class="keywordlist"><h1 align="center">Items tagged "<%= "#{@keyword}" %>"</h1><br><br>
+
+  <%  @results.each do |object| %>
+  <% @object = object %>
+  <% @success_message = "" %>
+   <% if @object.class == Quote %>
+     <%= render partial: "quote_formatting" %>
+   
+   <% elsif @object.class == Term%>
+     <%= render partial: "term_formatting"%>
+     
+  <% elsif @object.class == Excerpt%>
+    <%= render partial: "excerpt_formatting" %>
+     
+   <% elsif @object.class == Person%>
+     <% if @object.state != ""%>
+        <% @state = "#{@object.state}, " %>
+     <% end  %>
+     <%= render partial: "person_formatting" %>
+
+     
+     
+   <% end %>
+ <% end %></div><p></p>

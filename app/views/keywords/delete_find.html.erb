@@ -1,0 +1,15 @@
+<div class="newandupdate"><h1>Delete an existing keyword</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+  <form action="/admin/keywords/delete_choice" method="post">
+    <label><strong>Keyword:</strong></label><br><br>  
+    <select name="id">
+      <% @keywords_array.each do |object| %>
+        <option value="<%= object.id %>"><%= object.keyword %></option>
+        <% end %>
+    </select>
+    <br><br>
+    <input name="authenticity_token" type="hidden" value="<%= session["_csrf_token"] %>" />  
+    <input type="submit" class="navbutton" style="width:145px" value="CHOOSE KEYWORD">
+  </form>    
+</div>

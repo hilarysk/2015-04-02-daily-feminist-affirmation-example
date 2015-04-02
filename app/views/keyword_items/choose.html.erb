@@ -1,0 +1,31 @@
+<div class="newandupdate"><h1>Change tags</h1>
+  <p class="error"><%= @fail_message %><%= @fail_message2 %>
+    <% if @error_messages %>
+    ERROR
+    <ul class="error">
+      <% @error_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  </p>  
+
+  <p><strong>1. Select the item type:</strong></p>
+  <form action="<%= "#{@path}" %>">
+     <select name="type">    
+         <option>Excerpt</option>
+         <option>Term</option>
+         <option>Quote</option>
+         <option>Person</option>
+    </select><br><br>  
+  <input type="submit" value="CHOOSE ITEM" class="navbutton" style="width:105px">
+  </form>
+
+  <% if @item_choice %> 
+    <%= render partial: "#{@item_choice}" %>
+  <% end %>
+
+  
+  <% if @item_tags %> 
+    <%= render partial: "#{@item_tags}" %>
+  <% end %>

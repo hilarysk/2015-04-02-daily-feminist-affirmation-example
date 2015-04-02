@@ -1,0 +1,12 @@
+<form action="<%= "#{@path}" %>">
+
+<p></p>
+<form>
+<p>Excerpts from <em><%= "#{params["source"]}" %></em> (just the first and last 50 characters):</p>
+<select name="ex_text">
+<p><% @text_array.each do |object| %>
+  <option><%= "#{object.excerpt.byteslice(0...50)}" %> ... <%= "#{object.excerpt.byteslice(-50...-1)}" %>.</option>
+  <% end %></p>
+</select>
+<br><br>
+</form> 

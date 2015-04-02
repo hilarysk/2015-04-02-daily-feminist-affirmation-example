@@ -1,0 +1,12 @@
+<div class="newandupdate">
+
+  <h1>Delete confirmation:</h1>
+  <p>Please review the keyword and confirm your intent to permanently delete it by clicking "delete keyword".</p>
+  
+  <%= form_for @keyword, method: :delete, url: "/admin/keywords/#{@new_item.id}" do |f| %>
+    <strong>Keyword:</strong><br><br>
+    <%= @new_item.keyword %><br><br>
+    <%= f.hidden_field :id, value: @new_item.id %>
+    <%= f.submit "DELETE KEYWORD", style: "width:145px", class: "navbutton" %><% end %><a href="/admin/update_database"><button class="navbutton" style="width: 145px; float: right; display: inline-block">DON'T DELETE</button></a>
+</div>
+

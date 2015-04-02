@@ -1,0 +1,15 @@
+<div class="newandupdate"><h1>Update an existing administrator</h1>  
+  <p class="error"><%= @error_messages %></p>
+  
+<form action="/admin/users/update_choice" method="post">
+  <label><strong>Administrators:</strong></label><br><br>  
+  <select name="id">
+    <% @users_array.each do |object| %>
+      <option value="<%= object.id %>"><%= object.email %></option>
+      <% end %>
+  </select>
+  <br><br>
+  <input name="authenticity_token" type="hidden" value="<%= session["_csrf_token"] %>" />  
+  <input type="submit" class="navbutton" style="width:185px" value="CHOOSE ADMINISTRATOR">
+</form>  
+</div>

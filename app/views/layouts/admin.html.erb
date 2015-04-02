@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+  <head>
+    <title>Daily Feminist Affirmation</title>
+    <meta name="description" content="Everyone needs a little more feminism in their lives. "/>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <div id="wrapper">
+  
+    <div id="header" link="#000000" vlink="#000000" alink="#000000">
+      <h4 class="headerheading"><a href="/yay">DAILY FEMINIST AFFIRMATION</a></h4>
+      <div id="jsReaffirm" class="reaffirm">
+        <a id="publicMenuAnchor" href="#">MENU</a>
+        <div id="publicMenu" style="display:none">
+            <a href="/admin/update_database" class="adminbuttonbig">UPDATE<br>LIBRARY</a>
+            <a href="/search" class="adminbutton">SEARCH</a>
+        </div>
+      </div>
+
+    <hr></hr>
+    </div>
+
+
+
+    <div main>
+      <body class="standard" link="#000000" vlink="#000000" alink="#000000">
+        <%= yield %>
+      </body>
+    </div>
+
+  </div>
+
+  <div id="footer"> 
+    <hr></hr>
+    <h4 class="footerfooting"><a href="/logout">LOGOUT</a></h4> <!-- MAKE SO THAT CHANGES FROM login TO logout WHEN, YOU KNOW, SOMEONE IS LOGGED IN WHO COULD LOGOUT. -->
+  </div>
+</html>
