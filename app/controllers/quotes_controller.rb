@@ -15,7 +15,8 @@ class QuotesController < ApplicationController
 
   def privilege_check
     if session[:privilege] == 3
-      redirect_to ("/login?error=Looks like you might need to check your privilege; you don't seem to have permission to do that. :(.")
+      flash["error"] = "Looks like you might need to check your privilege; you don't seem to have permission to do that. :(."
+      redirect_to ("/login")
     end
   end
   

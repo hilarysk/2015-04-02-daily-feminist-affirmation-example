@@ -5,11 +5,9 @@ Dailyfemaff::Application.routes.draw do
   #
   # ------------- LINE 140 IN EXCERPTS CONTROLLER: USE METHOD FOR PRE-SELECTING DROPDOWN -------------
   #
-  # - Parallax?
-  # - code video describing tagging process for THIS site
   # - Design - more gray boxes, more hover with checkboxes, fewer dropdowns for display where possible
   # - Test that putting in bad info doesn't work and displays errors properly
-  # - Make so when click submit buttons, partial 'display' changes instead of loading partial (cleaner, doesn't reload page)
+  # - Make so when click submit buttons, partial 'display' changes instead of loading partiaL
   # - Add so admins can see all of particular item (already exists in search, but still)
   # - Make so yay item.sample requires one database call instead of four
   # - Pull out the auto-keyword tagging into method

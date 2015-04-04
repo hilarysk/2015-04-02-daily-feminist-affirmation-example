@@ -5,7 +5,8 @@ class ApplicationController < ActionController::Base
   
   def session_check
     if session[:user_id] == nil
-      return redirect_to ("/login?error=Oops! Looks like you need to login first.")
+      flash[:error] = "Oops! Looks like you need to login first."
+      return redirect_to ("/login")
    elsif session[:status] == "inactive"
       return redirect_to ("/admin/inactive")
     end
@@ -32,7 +33,8 @@ class ApplicationController < ActionController::Base
       end
     
     else 
-      redirect_to ("/login?error=We couldn't find you in the system; please try again.")    
+      flash["error"] = "We couldn't find you in the system; please try again."
+      redirect_to ("/login")    
     end
 
   end

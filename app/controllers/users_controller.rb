@@ -6,8 +6,9 @@ class UsersController < ApplicationController
   before_filter :privilege_check, only: [:delete_find, :delete_choice, :deleteconfirm, :delete, :new, :create, :update_choice, :update_find]
 
   def privilege_check
-    if session[:privilege] > 1
-      redirect_to ("/login?error=Looks like you might need to check your privilege; you don't seem to have permission to do that. :(.")
+    if session[:privilege] == 3
+      flash["error"] = "Looks like you might need to check your privilege; you don't seem to have permission to do that. :(."
+      redirect_to ("/login")
     end
   end
   
