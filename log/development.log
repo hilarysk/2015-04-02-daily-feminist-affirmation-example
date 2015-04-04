@@ -343,3 +343,15 @@ Served asset /admin.js - 304 Not Modified (0ms)
 
 Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-02 15:26:39 -0500
 Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (1.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTableForExcerpt (20150318152909)
+Migrating to CreateTableForQuote (20150318155735)
+Migrating to CreateTableForPeople (20150318162103)
+Migrating to CreateTableForTerms (20150318164330)
+Migrating to CreateTableForUsers (20150318164558)
+Migrating to CreateTableForKeywords (20150318165037)
+Migrating to CreateTableForKeywordItems (20150318165614)
+Migrating to AddActiveFieldToUsersTable (20150325182408)
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
