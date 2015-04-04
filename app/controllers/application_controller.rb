@@ -18,8 +18,8 @@ class ApplicationController < ActionController::Base
   
   def user_verify
     user = User.find_by_email(params["email"].downcase)
-    
-    if user.password 
+  
+    if user.methods.include?(:password) 
 
       if BCrypt::Password.new(user.password) == params["password"].to_s
         session[:user_id] = user.id
@@ -36,7 +36,7 @@ class ApplicationController < ActionController::Base
       end
     
     else 
-      flash["error"] = "We couldn't find you in the system; please try again."
+      flash[:error] = "We couldn't find you in the system; please try again."
       redirect_to ("/login")    
     end
 

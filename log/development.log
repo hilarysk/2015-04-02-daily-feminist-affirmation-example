@@ -440,3 +440,440 @@ NoMethodError (undefined method `password' for nil:NilClass):
   Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
   Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-03 22:11:47 -0500
+Connecting to database specified by database.yml
+Processing by ApplicationController#user_verify as HTML
+  Parameters: {"email"=>"test@fish.com", "password"=>"[FILTERED]"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'test@fish.com' LIMIT 1[0m
+Completed 500 Internal Server Error in 47.5ms
+
+NoMethodError (undefined method `password' for nil:NilClass):
+  app/controllers/application_controller.rb:22:in `user_verify'
+
+
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/logout" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Connecting to database specified by database.yml
+Processing by ApplicationController#logout as HTML
+  Rendered admin/login.html.erb within layouts/public (1.5ms)
+Completed 200 OK in 40.5ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /admin.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /admin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /public.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /public.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:12:24 -0500
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-03 22:12:30 -0500
+Processing by ApplicationController#user_verify as HTML
+  Parameters: {"email"=>"fish@test.com", "password"=>"[FILTERED]"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'fish@test.com' LIMIT 1[0m
+Completed 500 Internal Server Error in 88548.6ms
+
+NoMethodError (undefined method `password' for nil:NilClass):
+  app/controllers/application_controller.rb:22:in `user_verify'
+
+
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/hilarysk/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-3.2.21/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Connecting to database specified by database.yml
+Processing by ApplicationController#logout as HTML
+  Rendered admin/login.html.erb within layouts/public (0.8ms)
+Completed 200 OK in 18.2ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /public.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /admin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /public.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:06 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Processing by ApplicationController#user_verify as HTML
+  Parameters: {"email"=>"fish@testc.om", "password"=>"[FILTERED]"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'fish@testc.om' LIMIT 1[0m
+Redirected to http://localhost:3000/login
+Completed 302 Found in 46.4ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (0.9ms)
+Completed 200 OK in 9.2ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/update_database" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Processing by AdminController#update_database as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :session_check rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (0.1ms)
+Completed 200 OK in 8.4ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:14:33 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/update_database" for 127.0.0.1 at 2015-04-03 22:15:48 -0500
+Connecting to database specified by database.yml
+Processing by AdminController#update_database as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :session_check rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:15:48 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (1.6ms)
+Completed 200 OK in 13354.4ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /public.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /admin.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /public.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:01 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Processing by PublicController#whoops as HTML
+  Parameters: {"path"=>"admin"}
+  Rendered public/whoops.html.erb within layouts/public (0.2ms)
+Completed 200 OK in 6.1ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/404HeyGirl.jpg" for 127.0.0.1 at 2015-04-03 22:16:23 -0500
+Served asset /404HeyGirl.jpg - 200 OK (5ms)
+
+
+Started GET "/admin/people/3/edit" for 127.0.0.1 at 2015-04-03 22:16:26 -0500
+Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :session_check rendered or redirected
+Completed 302 Found in 0.6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:16:26 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (0.1ms)
+Completed 200 OK in 14077.4ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:16:41 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2015-04-03 22:17:35 -0500
+Connecting to database specified by database.yml
+Processing by PublicController#whoops as HTML
+  Parameters: {"path"=>"admin"}
+  Rendered public/whoops.html.erb within layouts/public (1.0ms)
+Completed 200 OK in 18.1ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /admin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /public.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /admin.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /public.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:36 -0500
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/admin/update_database" for 127.0.0.1 at 2015-04-03 22:17:41 -0500
+Processing by AdminController#update_database as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :session_check rendered or redirected
+Completed 302 Found in 0.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:17:41 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (0.5ms)
+Completed 200 OK in 9527.2ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/update_database" for 127.0.0.1 at 2015-04-03 22:17:50 -0500
+Processing by AdminController#update_database as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :session_check rendered or redirected
+Completed 302 Found in 0.4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-04-03 22:17:50 -0500
+Processing by AdminController#login as HTML
+  Rendered admin/login.html.erb within layouts/public (0.0ms)
+Completed 200 OK in 2608.7ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /admin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.css?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /public.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /admin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/public.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /public.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-03 22:17:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)

@@ -46,7 +46,7 @@ class AdminController < ApplicationController
   # WHERE USER LOGS IN
   
   def login
-    @fail_message = flash["error"]
+    @fail_message = flash[:error]
     render layout: "public"
   end
   
@@ -55,7 +55,7 @@ class AdminController < ApplicationController
   # LOADS PAGE WITH ADMINISTRATIVE ACTIONS
   
   def update_database
-    @error = flash["error"]
+    @error = flash[:error]
     @message = session[:message]
   end
     
